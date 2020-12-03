@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="4" type="collection">
+        <element label="New Field 1" max_length="40" name="new_field_1" type="integer"/>
+        <element label="New Field 2" max_length="100" name="new_field_2" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Due Date" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_request_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="standard" label="Request Type" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Standard" sequence="0" value="standard"/>
+                <element inactive_on_update="false" label="Special" sequence="1" value="special"/>
+                <element inactive_on_update="false" label="Customized" sequence="2" value="customized"/>
+                <element inactive_on_update="false" label="Ordinary" sequence="3" value="ordinary"/>
+                <element inactive_on_update="false" label="Urgent" sequence="4" value="urgent"/>
+            </choice>
+        </element>
+    </element>
+</database>
